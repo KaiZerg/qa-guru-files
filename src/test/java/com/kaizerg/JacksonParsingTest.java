@@ -2,6 +2,7 @@ package com.kaizerg;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
@@ -12,6 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class JacksonParsingTest {
     @Test
+    @DisplayName("Проверка содержания JSON файла")
     public void testJsonParsing() throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
         File jsonFile = new File("src/test/resources/test.json");
